@@ -1,7 +1,3 @@
-.portfolio {
-  padding: 120px 0;
-}
-
 .portfolio .portfolio-title {
   font-weight: 700;
   font-size: 36px;
@@ -18,33 +14,55 @@
   color: #2e2f42;
 }
 
+/* Мобільна: 1 колонка */
 .portfolio .portfolio-list {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 48px 24px;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.portfolio .portfolio-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+  transition: box-shadow 250ms ease-in-out;
+}
+
+.portfolio .portfolio-media {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio .portfolio-photo {
+  display: block;
+  width: 100%;
+  height: 232px;
+  object-fit: cover;
 }
 
 .portfolio .portfolio-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 8px;
+  padding: 32px 16px;
   border-bottom: 1px solid #e7e9fc;
   border-left: 1px solid #e7e9fc;
   border-right: 1px solid #e7e9fc;
-  padding: 32px 16px;
-  gap: 8px;
 }
 
-.portfolio .portfolio-photo {
-  display: block;
-}
-
-.portfolio .portfolio-card {
-  transition: box-shadow 250ms ease-in-out;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
+.portfolio .portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 40px 32px;
+  background-color: #4d5ae5;
+  color: #f4f4fd;
+  transform: translateY(100%);
+  transition: transform 250ms ease-in-out;
 }
 
 .portfolio .portfolio-card:hover {
@@ -58,22 +76,26 @@
   transform: translateY(0);
 }
 
-.portfolio .portfolio-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #4d5ae5;
-  width: 100%;
-  height: 100%;
-  color: #f4f4fd;
-  transform: translateY(100%);
-  transition: transform 250ms ease-in-out;
-  padding: 40px 32px;
+/* Планшет: 2 колонки */
+@media screen and (min-width: 768px) {
+  .portfolio .portfolio-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 48px 24px;
+  }
+
+  .portfolio .portfolio-card {
+    width: calc((100% - 24px) / 2);
+  }
+
+  .portfolio .portfolio-photo {
+    height: 300px;
+  }
 }
 
-.portfolio .portfolio-media {
-  max-height: 300px;
-  max-width: 360px;
-  position: relative;
-  overflow: hidden;
+/* Десктоп: 3 колонки */
+@media screen and (min-width: 1158px) {
+  .portfolio .portfolio-card {
+    width: calc((100% - 48px) / 3);
+  }
 }

@@ -1,3 +1,7 @@
+.hide {
+  display: none !important;
+}
+
 h1,
 h2,
 h3,
@@ -16,6 +20,10 @@ ol {
   padding-left: 0;
 }
 
+ul {
+  list-style-type: none;
+}
+
 body {
   background-color: #fff;
   color: #434455;
@@ -25,25 +33,10 @@ body {
   letter-spacing: 0.02em;
 }
 
-ul {
-  list-style-type: none;
-}
-
-.logo {
-  color: #2e2f42;
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 1.33333;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-
-.container {
-  max-width: 1158px;
-  padding: 0 15px;
-  margin: 0 auto;
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .sr-only {
@@ -59,7 +52,60 @@ ul {
   margin: -1px;
 }
 
+/* Mobile first: базові стилі для телефону (від 320px) */
+.container {
+  width: 100%;
+  min-width: 320px;
+  max-width: 480px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 96px 0;
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11111;
+  text-align: center;
+  color: #2e2f42;
+}
+
+.logo {
+  display: block;
+  color: #2e2f42;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.33333;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
 button,
-input {
+input,
+textarea {
   font-family: inherit;
+}
+
+/* Планшет */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+/* Десктоп */
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding: 0 15px;
+  }
+
+  .section {
+    padding: 120px 0;
+  }
 }

@@ -49,11 +49,74 @@
             </li>
           </ul>
         </address>
+        <a class="menu-toggle" href="#mobile-menu" aria-label="Open menu">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+          >
+            <path d="M3 6h18M3 12h18M3 18h18" />
+          </svg>
+        </a>
       </div>
     </header>
 
+    <!-- Mobile menu (відкривається через :target, без JS) -->
+    <div class="mobile-menu" id="mobile-menu">
+      <a class="button-close" href="#" aria-label="Close menu">
+        <svg class="icon-close" width="8" height="8">
+          <use href="./images/icons.svg#close"></use>
+        </svg>
+      </a>
+      <nav>
+        <ul class="mobile-nav-list">
+          <li>
+            <a class="mobile-nav-link active" href="#features">Features</a>
+          </li>
+          <li><a class="mobile-nav-link" href="#team">Team</a></li>
+          <li><a class="mobile-nav-link" href="#portfolio">Portfolio</a></li>
+        </ul>
+      </nav>
+      <address class="mobile-address">
+        <a class="address-link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+        <a class="address-link" href="mailto:info@devstudio.com"
+          >info@devstudio.com</a
+        >
+      </address>
+      <ul class="social-media">
+        <li>
+          <a href="" class="social-ball"
+            ><svg class="social-icon" width="16" height="16">
+              <use href="./images/icons.svg#instagram"></use></svg
+          ></a>
+        </li>
+        <li>
+          <a href="" class="social-ball"
+            ><svg class="social-icon" width="16" height="16">
+              <use href="./images/icons.svg#twitter"></use></svg
+          ></a>
+        </li>
+        <li>
+          <a href="" class="social-ball"
+            ><svg class="social-icon" width="16" height="16">
+              <use href="./images/icons.svg#facebook"></use></svg
+          ></a>
+        </li>
+        <li>
+          <a href="" class="social-ball"
+            ><svg class="social-icon" width="16" height="16">
+              <use href="./images/icons.svg#linkedin"></use></svg
+          ></a>
+        </li>
+      </ul>
+    </div>
+
     <main>
-      <section id="hero" class="hero">
+      <section id="hero" class="section hero">
         <!--Hero-->
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
@@ -61,55 +124,55 @@
         </div>
       </section>
 
-      <section id="features" class="features">
+      <section id="features" class="section features">
         <!--Features-->
         <div class="container">
           <h2 class="sr-only">Our features</h2>
           <ul class="features-list">
             <li class="features-list-item">
               <div class="feature-rectangle">
-                <svg class="featuer-icon" width="64" height="64">
+                <svg class="feature-icon" width="64" height="64">
                   <use href="./images/icons.svg#antena"></use>
                 </svg>
               </div>
               <h3 class="feature-title">Strategy</h3>
-              <p>
+              <p class="feature-card-text">
                 Our goal is to identify the business problem to walk away with
                 the perfect and creative solution.
               </p>
             </li>
             <li class="features-list-item">
               <div class="feature-rectangle">
-                <svg class="featuer-icon" width="64" height="64">
+                <svg class="feature-icon" width="64" height="64">
                   <use href="./images/icons.svg#clock"></use>
                 </svg>
               </div>
               <h3 class="feature-title">Punctuality</h3>
-              <p>
+              <p class="feature-card-text">
                 Bring the key message to the brand's audience for the best price
                 within the shortest possible time.
               </p>
             </li>
             <li class="features-list-item">
               <div class="feature-rectangle">
-                <svg class="featuer-icon" width="64" height="64">
+                <svg class="feature-icon" width="64" height="64">
                   <use href="./images/icons.svg#diagram"></use>
                 </svg>
               </div>
               <h3 class="feature-title">Diligence</h3>
-              <p>
+              <p class="feature-card-text">
                 Research and confirm brands with the strongest digital growth
                 opportunities and minimize risk.
               </p>
             </li>
             <li class="features-list-item">
               <div class="feature-rectangle">
-                <svg class="featuer-icon" width="64" height="64">
+                <svg class="feature-icon" width="64" height="64">
                   <use href="./images/icons.svg#astronaut"></use>
                 </svg>
               </div>
               <h3 class="feature-title">Technologies</h3>
-              <p>
+              <p class="feature-card-text">
                 Design practice focused on digital experiences. We bring forth a
                 deep passion for problem-solving.
               </p>
@@ -118,11 +181,11 @@
         </div>
       </section>
 
-      <section id="team" class="team">
+      <section id="team" class="section team">
         <!--Team-->
         <div class="container">
-          <h2>Our Team</h2>
-          <ul>
+          <h2 class="section-title">Our Team</h2>
+          <ul class="team-list">
             <li class="card">
               <img
                 class="team-photo"
@@ -299,7 +362,7 @@
         </div>
       </section>
 
-      <section id="portfolio" class="portfolio">
+      <section id="portfolio" class="section portfolio">
         <div class="container">
           <h2 class="portfolio-title">Our Portfolio</h2>
           <ul class="portfolio-list">
@@ -315,7 +378,7 @@
                 <p class="portfolio-overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
-                  · Cloud St
+                  · Cloud Storage App
                 </p>
               </div>
 
@@ -424,7 +487,7 @@
       </section>
     </main>
 
-    <footer id="footer" class="footer">
+    <footer id="footer" class="section footer">
       <div class="container">
         <div class="footer-information">
           <a class="logo" href="./index.html"
@@ -436,7 +499,7 @@
           </p>
         </div>
         <div class="footer-social">
-          <p class="social-text">Social media</p>
+          <p class="footer-text title">Social media</p>
           <ul class="social-media">
             <li>
               <a href="" class="social-ball">
@@ -468,7 +531,7 @@
             </li>
           </ul>
         </div>
-        <div class="container footer-subscribe">
+        <div class="footer-subscribe">
           <p class="footer-subscribe-title">Subscribe</p>
           <form class="footer-form">
             <label>

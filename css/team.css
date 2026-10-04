@@ -1,18 +1,11 @@
 .team {
   background-color: #f4f4fd;
-  padding: 120px 0;
 }
 
-.card {
-  background-color: #fff;
-}
-
-.team h2 {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11111;
-  text-align: center;
-  color: #2e2f42;
+.team .container {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
 }
 
 .team h3 {
@@ -27,25 +20,34 @@
   text-align: center;
 }
 
-.team .container {
+/* Мобільна: 1 колонка */
+.team-list {
   display: flex;
   flex-direction: column;
-  gap: 72px;
+  align-items: center;
+  gap: 64px;
 }
 
-.team ul {
-  display: flex;
-  gap: 24px;
+.card {
+  background-color: #fff;
 }
 
 .team .card {
   display: flex;
   flex-direction: column;
+  width: 264px;
+  max-width: 100%;
   border-radius: 0 0 4px 4px;
   box-shadow:
     0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16),
     0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+
+.team .team-photo {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .team-card {
@@ -55,18 +57,24 @@
   gap: 8px;
 }
 
-.team .team-photo {
-  display: block;
+.team .social-media {
+  justify-content: center;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
 }
 
 .social-ball {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 40px;
   width: 40px;
   height: 40px;
   background: #4d5ae5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   transition: background-color 250ms ease-in-out;
 }
 
@@ -77,4 +85,23 @@
 
 .social-icon {
   color: #f4f4fd;
+}
+
+/* Планшет: 2 колонки */
+@media screen and (min-width: 768px) {
+  .team-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 64px 24px;
+  }
+}
+
+/* Десктоп: 4 в ряд */
+@media screen and (min-width: 1158px) {
+  .team-list {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
 }

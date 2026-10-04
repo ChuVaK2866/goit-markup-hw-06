@@ -5,52 +5,39 @@
 
 .footer .logo {
   color: #f4f4fd;
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 1.33333;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  text-decoration: none;
 }
 
-.footer .web {
-  color: #4d5ae5;
-}
-
+.footer-text,
 .footer .footer-text {
   color: #f4f4fd;
 }
 
-.footer .footer-information {
-  display: flex;
-  flex-direction: column;
-  max-width: 264px;
-  gap: 16px;
-  margin-right: 120px;
-}
-
+/* Мобільна: все в одну колонку по центру */
 .footer .container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  gap: 72px;
+  text-align: center;
+}
+
+.footer-information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  max-width: 264px;
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 }
 
 .footer .social-media {
-  display: flex;
-  flex-direction: row;
-  gap: 16px;
-}
-
-.footer .social-text {
-  font-weight: 500;
-  font-size: 16px;
-  color: #fff;
-}
-
-.footer .footer-social {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  justify-content: center;
 }
 
 .footer .social-ball:hover,
@@ -58,30 +45,41 @@
   background-color: #31d0aa;
 }
 
-.footer .footer-subscribe-title {
+.footer .social-text,
+.footer .footer-text.title,
+.footer-subscribe-title {
   font-weight: 500;
+  font-size: 16px;
   color: #fff;
 }
 
-.container.footer-subscribe {
-  margin-left: auto;
+.footer-subscribe {
+  display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 16px;
+  width: 100%;
 }
 
 .footer-form {
   display: flex;
-  justify-content: flex-start;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
   gap: 24px;
+  width: 100%;
+}
+
+.footer-form label {
+  display: block;
+  width: 100%;
 }
 
 .footer-input {
+  width: 100%;
+  height: 40px;
+  padding: 8px 16px;
   border: 1px solid #fff;
   border-radius: 4px;
-  padding: 8px 16px;
-  width: 264px;
-  height: 40px;
   background-color: #2e2f42;
   color: #fff;
   transition: border-color 250ms ease-in-out;
@@ -97,26 +95,80 @@
 }
 
 .footer-button {
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 16px;
-  background-color: #4d5ae5;
+  width: 165px;
+  max-width: 165px;
+  height: 40px;
+  padding: 8px 24px;
   border: 0;
   border-radius: 4px;
-  width: 165px;
-  height: 40px;
+  background-color: #4d5ae5;
+  color: #fff;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
   cursor: pointer;
-  padding: 8px 24px;
-  max-width: 165px;
   transition: background-color 250ms ease-in-out;
 }
 
 .footer-button:hover,
 .footer-button:focus {
   background-color: #31d0aa;
+}
+
+/* Планшет: лого + соцмережі в ряд, підписка нижче */
+@media screen and (min-width: 768px) {
+  .footer .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 72px 24px;
+    padding: 0 108px;
+    text-align: left;
+  }
+
+  .footer-information,
+  .footer-social,
+  .footer-subscribe {
+    align-items: flex-start;
+  }
+
+  .footer .social-media {
+    justify-content: flex-start;
+  }
+
+  .footer-subscribe {
+    width: 100%;
+  }
+
+  .footer-form {
+    flex-direction: row;
+    justify-content: flex-start;
+    width: auto;
+  }
+
+  .footer-form label {
+    width: 264px;
+  }
+}
+
+/* Десктоп: усе в один рядок */
+@media screen and (min-width: 1158px) {
+  .footer .container {
+    flex-wrap: nowrap;
+    gap: 0;
+    padding: 0 15px;
+  }
+
+  .footer-information {
+    margin-right: 120px;
+  }
+
+  .footer-subscribe {
+    width: auto;
+    margin-left: auto;
+  }
 }

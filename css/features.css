@@ -1,8 +1,27 @@
-.features {
-  padding: 120px 0;
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
 }
 
-.features .sr-only {
+.features-list-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.feature-rectangle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  background: #f4f4fd;
+  width: 264px;
+  height: 112px;
+}
+
+.feature-title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11111;
@@ -10,40 +29,45 @@
   color: #2e2f42;
 }
 
-.features .feature-title {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  color: #2e2f42;
+.feature-card-text {
+  text-align: center;
 }
 
-.features .container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-.features .features-list {
-  display: flex;
-  gap: 24px;
+/* Планшет: 2 колонки */
+@media screen and (min-width: 768px) {
+  .features-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+  }
+
+  .features-list-item {
+    width: calc((100% - 24px) / 2);
+  }
+
+  .feature-title,
+  .feature-card-text {
+    text-align: left;
+  }
 }
 
-.features .features-list-item {
-  display: flex;
-  width: 264px;
-  flex-direction: column;
-  gap: 8px;
-}
+/* Десктоп: 4 колонки з іконками */
+@media screen and (min-width: 1158px) {
+  .features-list {
+    flex-wrap: nowrap;
+  }
 
-.features .feature-rectangle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  gap: 0;
-  border: 1px solid #8e8f99;
-  border-radius: 4px;
-  background: #f4f4fd;
-  width: 264px;
-  height: 112px;
+  .features-list-item {
+    width: 264px;
+  }
+
+  .feature-rectangle {
+    display: flex;
+  }
+
+  .feature-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+  }
 }
