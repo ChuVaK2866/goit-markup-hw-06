@@ -55,8 +55,7 @@ img {
 /* Mobile first: базові стилі для телефону (від 320px) */
 .container {
   width: 100%;
-  min-width: 320px;
-  max-width: 480px;
+  max-width: 320px;
   padding: 0 16px;
   margin: 0 auto;
 }
@@ -89,6 +88,34 @@ button,
 input,
 textarea {
   font-family: inherit;
+}
+
+/* Спільна кнопка закриття (модалка + мобільне меню) */
+.button-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 24px;
+  background-color: #e7e9fc;
+  color: #2e2f42;
+  cursor: pointer;
+  transition:
+    background-color 250ms ease-in-out,
+    border-color 250ms ease-in-out,
+    color 250ms ease-in-out;
+}
+
+.button-close:hover,
+.button-close:focus {
+  background-color: #404bbf;
+  border-color: #404bbf;
+  color: #fff;
 }
 
 /* Планшет */

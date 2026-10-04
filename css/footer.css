@@ -1,6 +1,6 @@
 .footer {
   background-color: #2e2f42;
-  padding: 100px 0;
+  padding: 96px 0;
 }
 
 .footer .logo {
@@ -12,13 +12,16 @@
   color: #f4f4fd;
 }
 
-/* Мобільна: все в одну колонку по центру */
 .footer .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 72px;
   text-align: center;
+}
+
+.footer-information .footer-text {
+  text-align: left;
 }
 
 .footer-information {
@@ -65,7 +68,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
+  gap: 16px;
   width: 100%;
 }
 
@@ -119,7 +122,6 @@
   background-color: #31d0aa;
 }
 
-/* Планшет: лого + соцмережі в ряд, підписка нижче */
 @media screen and (min-width: 768px) {
   .footer .container {
     flex-direction: row;
@@ -147,6 +149,7 @@
   .footer-form {
     flex-direction: row;
     justify-content: flex-start;
+    gap: 24px;
     width: auto;
   }
 
@@ -155,8 +158,11 @@
   }
 }
 
-/* Десктоп: усе в один рядок */
 @media screen and (min-width: 1158px) {
+  .footer {
+    padding: 100px 0;
+  }
+
   .footer .container {
     flex-wrap: nowrap;
     gap: 0;

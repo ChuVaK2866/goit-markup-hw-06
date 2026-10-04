@@ -4,7 +4,7 @@
 }
 
 .header .logo {
-  padding: 24px 0;
+  padding: 16px 0;
 }
 
 .web {
@@ -72,6 +72,7 @@
 
   .header .logo {
     margin-right: 120px;
+    padding: 24px 0;
   }
 
   .header-navigation {
@@ -91,6 +92,7 @@
   .address-list {
     display: flex;
     flex-direction: column;
+    gap: 12px;
   }
 
   .navigation-link,

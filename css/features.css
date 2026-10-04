@@ -1,4 +1,4 @@
-.features-list {
+Features · CSS .features-list {
   display: flex;
   flex-direction: column;
   gap: 72px;
@@ -22,7 +22,7 @@
 }
 
 .feature-title {
-  font-weight: 700;
+  font-weight: 500;
   font-size: 36px;
   line-height: 1.11111;
   text-align: center;
@@ -30,7 +30,8 @@
 }
 
 .feature-card-text {
-  text-align: center;
+  font-weight: 500;
+  text-align: left;
 }
 
 /* Планшет: 2 колонки */
@@ -66,8 +67,12 @@
   }
 
   .feature-title {
-    font-weight: 500;
+    font-weight: 400;
     font-size: 20px;
     line-height: 1.2;
+  }
+
+  .feature-card-text {
+    font-weight: 400;
   }
 }

@@ -28,7 +28,7 @@
   width: 100%;
   max-width: 408px;
   max-height: 100%;
-  padding: 24px;
+  padding: 24px 16px;
   overflow-y: auto;
   border-radius: 4px;
   background-color: #fcfcfc;
@@ -36,33 +36,6 @@
     0 1px 1px 0 rgba(0, 0, 0, 0.14),
     0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
-}
-
-.button-close {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 24px;
-  height: 24px;
-  border: 1px solid rgba(46, 47, 66, 0.4);
-  border-radius: 24px;
-  background-color: #e7e9fc;
-  color: #2e2f42;
-  cursor: pointer;
-  transition:
-    background-color 250ms ease-in-out,
-    border-color 250ms ease-in-out,
-    color 250ms ease-in-out;
-}
-
-.button-close:hover,
-.button-close:focus {
-  background-color: #404bbf;
-  border-color: #404bbf;
-  color: #fff;
 }
 
 .modal-title {
@@ -225,4 +198,11 @@
 .modal-send-button:hover,
 .modal-send-button:focus {
   background-color: #404bbf;
+}
+
+/* Планшет: бічні відступи діалогу 24px */
+@media screen and (min-width: 768px) {
+  .modal {
+    padding: 24px;
+  }
 }
