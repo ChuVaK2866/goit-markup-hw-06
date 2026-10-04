@@ -90,6 +90,40 @@ textarea {
   font-family: inherit;
 }
 
+/* Спільний список соцмереж: горизонтальний ряд, інтервал 16px */
+.social-media {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 16px;
+}
+
+.social-media > li {
+  flex-shrink: 0;
+}
+
+.social-ball {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 40px;
+  width: 40px;
+  height: 40px;
+  background: #4d5ae5;
+  transition: background-color 250ms ease-in-out;
+}
+
+.social-ball:hover,
+.social-ball:focus {
+  background-color: #404bbf;
+}
+
+.social-icon {
+  color: #f4f4fd;
+}
+
 /* Спільна кнопка закриття (модалка + мобільне меню) */
 .button-close {
   position: absolute;

@@ -61,32 +61,6 @@
   justify-content: center;
 }
 
-.social-media {
-  display: flex;
-  flex-direction: row;
-  gap: 16px;
-}
-
-.social-ball {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 40px;
-  width: 40px;
-  height: 40px;
-  background: #4d5ae5;
-  transition: background-color 250ms ease-in-out;
-}
-
-.social-ball:hover,
-.social-ball:focus {
-  background-color: #404bbf;
-}
-
-.social-icon {
-  color: #f4f4fd;
-}
-
 /* Планшет: 2 колонки */
 @media screen and (min-width: 768px) {
   .team-list {

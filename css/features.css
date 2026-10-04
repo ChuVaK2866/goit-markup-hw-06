@@ -1,4 +1,4 @@
-Features · CSS .features-list {
+.features-list {
   display: flex;
   flex-direction: column;
   gap: 72px;
@@ -22,7 +22,7 @@ Features · CSS .features-list {
 }
 
 .feature-title {
-  font-weight: 500;
+  font-weight: 700;
   font-size: 36px;
   line-height: 1.11111;
   text-align: center;
@@ -67,7 +67,7 @@ Features · CSS .features-list {
   }
 
   .feature-title {
-    font-weight: 400;
+    font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
   }

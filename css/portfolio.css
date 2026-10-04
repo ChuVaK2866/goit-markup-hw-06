@@ -81,7 +81,7 @@
   .portfolio .portfolio-list {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 48px 24px;
+    gap: 72px 24px;
   }
 
   .portfolio .portfolio-card {
@@ -95,6 +95,10 @@
 
 /* Десктоп: 3 колонки */
 @media screen and (min-width: 1158px) {
+  .portfolio .portfolio-list {
+    gap: 48px 24px;
+  }
+
   .portfolio .portfolio-card {
     width: calc((100% - 48px) / 3);
   }

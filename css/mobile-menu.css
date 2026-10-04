@@ -1,4 +1,3 @@
-Mobile menu · CSS
 /* --- Мобільне меню: overlay > container --- */
 .mobile-menu {
   position: fixed;
@@ -29,9 +28,9 @@ Mobile menu · CSS
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 40px;
+  gap: 48px;
   min-height: 100%;
-  padding: 96px 16px 32px;
+  padding: 72px 16px 40px;
 }
 
 .mobile-menu .button-close {
